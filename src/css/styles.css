@@ -1,0 +1,201 @@
+/* quando começa com ., é pq estou estilizando a classe */
+
+body {
+    font-family: "Poppins", sans-serif; /* sans serif é o plano b, caso a poppins n carregue*/
+    background-image: url("../imagens/background.png");
+    background-size: cover; /*impede de ficar repetindo a imagem */
+    background-position: center;
+}
+
+body::before{/*pseudo-elemento, ou seja, criei um elemento atraves do css que fica depois do body, é como se eu colocasse um filtro na imagem*/
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;/*mexe na profundidade*/
+    backdrop-filter: blur(8px);/*da um blur*/
+
+}
+
+main {
+    display: flex; /*torna o posicionamento do elemento e filhos muito mais fácil*/
+    justify-content: center; /*alinha no centro, horizontalmente*/
+    align-items: center; /*alinha no centro, verticalmente*/
+    min-height: 100vh; /*define uma altura minima do elemento pai para que o elemento filho tenha espaço para se centralizar. vh é uma medida que varia de acordo com o tamanho da janela do navegador */
+}
+
+.apis{
+    display: flex;
+    gap: 30px; /*distancia os elementos*/
+    padding: 30px 0;
+}
+
+.cartao-api {
+    display: none; /*esconde todos os cartões*/
+    border-radius: 10px;
+    max-width: 360px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; /*copiada de um site*/
+}
+
+.cartao-api.aberto { /*todos os elementos que tem essas 2 classe juntas */
+    display: block; /*mostra*/
+}
+
+.cartao-api img { /*seletor de descentes, ou seja, todas as imgs que estao dentro da classe cartao-pokedev*/
+    width: 100%; /*impede da imagem vazar pra fora*/
+    height: 200px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.cartao-api .cartao-topo{
+    padding: 30px 40px 0;
+}
+
+.cartao-api .nome{
+    margin-bottom: 5px;
+}
+
+.cartao-api .tipo{
+    background-color: #ffffff;
+    font-size: 12px;
+    opacity: 0.7;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.cartao-api .detalhes{
+    color: #ffffff;
+    display: flex; /*vai jogar um do lado do outro*/
+    justify-content: space-between; /*vai dar um espaço maximo no meio dos elementos*/
+    align-items: center;/*alinha verticalmente*/
+}
+
+.cartao-api .cartao-informacoes{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 30px 50px;
+    margin-top: -70px; /*traz o elemento pra cima*/
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.cartao-api .cartao-informacoes h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #6b727a;
+}
+
+.cartao-api .cartao-informacoes ul{
+    overflow-y: scroll;
+    height: 90%;
+}
+
+.cartao-api .cartao-informacoes li{
+    font-size: 14px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #6b727a;
+}
+
+.cartao-api .cartao-informacoes .descricao{
+    padding: 0 10px;
+    font-size: 15px;
+    max-height: 150px;
+}
+
+.div-botao{
+    background-color: #ffffff;
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.div-botao .botao{
+    display:block;
+    background-color: #f15000d2;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    padding: 12px 25px;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    transition: all .5s;
+    border: 1px solid transparent;
+}
+
+.div-botao .botao:hover{
+    border: 10px #f15000d2;
+    border-radius: 30%;
+}
+
+.jokes #joke{
+    max-height: 60px;
+    font-size: 16px;;
+}
+
+.tipo-cachorro{
+    background-color: #fcc719;
+    border-radius: 10px;
+}
+
+.tipo-jokes{
+    background-color: #f15000d2;
+    border-radius: 10px;
+}
+
+.tipo-grupo{
+    background-color: #015C98;
+    border-radius: 10px;
+}
+
+.listagem {
+    max-width: 200px;
+}
+
+.listagem .opcao img{
+    width:25%
+}
+
+.listagem .opcao{
+    background-color: #6b727a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    min-height: 70px;
+    transition: 0.5 ease-in-out; /*cria uma transicao pra quando eu passar o mouse em cima, uma animação*/
+}
+
+.listagem .opcao:hover{/*pseudo-classe*/
+    transform: scale(1.05); /*da um efeito de zoom quando eu passo o mouse*/
+}
+
+.listagem .opcao span{
+    padding-right: 20px;
+
+}
+
+.listagem .opcao.ativo{
+    background-color: #fa6668;
+}
+
+#joke{
+    max-width: 500px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}

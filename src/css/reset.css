@@ -1,0 +1,12 @@
+/*Vamos usar esse arquivo para resetar os estilos padrão definidos pelo navegador */
+
+/* Quando tem um *, significa que é pra todos os elementos do arquivo */
+* {
+    padding: 0; /*define uma a distância entre o conteúdo de um elemento e suas bordas, na parte de dentro*/
+    margin: 0; /*define a área de margem nos quatro lados do elemento, na parte de fora*/
+    box-sizing: border-box; /*modifica a maneira de exibir o tamanho de um box model (uma caixa). Por padrão, a conta é feita por altura, largura, padding e margin (content-box). Border box diz que é 100px por 100. Tudo o que eu por nessa caixa, tem que caber nese tamanho*/
+}
+
+ul {
+    list-style-type: none; /*tira todos os estilos da lista, incluindo as bolinha*/
+}

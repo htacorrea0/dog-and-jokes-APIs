@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>APIs</title>
+        <link rel="stylesheet" href="./src/css/reset.css">
+        <link rel="stylesheet" href="./src/css/styles.css">
+        <link rel="stylesheet" href="./src/css/responsivo.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"><!--Importando a fonte Poppins-->
+    </head>
+
+    <body>
+        <main>
+            <div class="apis">
+                <div class="cartoes-apis">
+                    <div class="cartao-api tipo-cachorro aberto" id="cartao-devchu">
+                        <div class="cartao-topo">
+                            <div class="detalhes">
+                                <h2 class="nome">API Dog Ceo</h2>
+                                <span>#001</span>
+                            </div>
+                            <span class="tipo">Cachorro</span>
+                            <div class="cartao-imagem">
+                                <img src="" alt="Dog picture here" id="dogPic">
+                            </div>
+                        </div>
+                        <div class="cartao-informacoes">
+                            <div class="descricao">
+                                <h3>Descrição</h3>
+                                <p>Essa API fornece fotos aleatórias e divertidas de cachorros, de diversas raças diferentes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cartao-api tipo-jokes" id="cartao-codevee">
+                        <div class="cartao-topo">
+                            <div class="detalhes">
+                                <h2 class="nome">API Jokes</h2>
+                                <span>#002</span>
+                            </div>
+                            <span class="tipo">Piadas</span>
+                            <div class="cartao-imagem">
+                                <img src="./src/imagens/rindo.gif" alt="Piadas" />
+                            </div>
+                        </div>
+                        <div class="cartao-informacoes">
+                            <div class="descricao">
+                                <h3>Piada</h3>
+                                <div class="jokes">
+                                    <p class= "joke" id="joke">Clique no botão: </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="div-botao">
+                            <button class="botao" id="btn">Nova piada</button>
+                        </div>
+                    </div>
+
+                    <div class="cartao-api tipo-grupo" id="cartao-psycoder">
+                        <div class="cartao-topo">
+                            <div class="detalhes">
+                                <h2 class="nome">Devs</h2>
+                                <span>#003</span>
+                            </div>
+                            <span class="tipo">Estudantes</span>
+                            <div class="cartao-imagem">
+                                <img src="./src/imagens/scriptle.png" alt="Psycoder"/>
+                            </div>
+                        </div>
+                        <div class="cartao-informacoes">
+                            <div class="descricao">
+                                <h3>Alunos</h3>
+                                <ul>
+                                    <li>Ágatha Cristie Corrêa Duarte - 247699</li>
+                                    <li>Diego Sato Covo - 249308</li>
+                                    <li>Guilherme Golçalves da Silva - 248954</li>
+                                    <li>Guilherme Soares dos Santos Silva - 249512</li>
+                                    <li>Raíssa Nicoly de Lima Souza - 249357</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="listagem">
+                    <ul>
+                        <li class="opcao ativo" id="devchu">
+                            <img src="./src/imagens/devchu.png" alt="devchu">
+                            <span>Dogs</span>
+                        </li>
+                        <!--Quando eu boto a class com 2 espaços, signica que eu to atribuindo 2 classes. Só 1 terá a classe ativo pq so um pode ser selecionado por vez -->
+                        <li class="opcao" id="codevee">
+                            <img src="./src/imagens/codevee.png" alt="codevee">
+                            <span>Jokes</span>
+                        </li>
+                        <li class="opcao" id="psycoder">
+                            <img src="./src/imagens/scriptle.png" alt="scriptle">
+                            <span>Grupo 4</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </main>
+        <script src="./src/js/index.js"></script>
+        <script src="./src/js/apiDog.js"></script>
+        <script src="./src/js/apiJoke.js"></script>
+    </body>
+</html>
