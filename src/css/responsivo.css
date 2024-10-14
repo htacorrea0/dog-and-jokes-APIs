@@ -14,15 +14,38 @@
     .cartao-api .cartao-informacoes{
         padding: 60px 30px 30px;
         margin-top: -50px;
+        height: 270px;
     }
 
     .cartao-api .cartao-informacoes .joke{
-        max-height: 10px;
-        overflow-y: scroll;
+        max-height: unset;
+        font-size: 18px;
     }
 
     .cartao-api .cartao-informacoes h3{
         font-size: 16px;
+    }
+
+    .jokes{
+        margin-top: 10px;
+        height: 200px;
+        overflow-y: scroll;
+    }
+
+
+    .jokes #setup,
+    .jokes #punchline {
+        max-width: 100%;
+        min-width: 100%;
+        max-height: 100%;
+        font-size: 18px;
+        margin-bottom: 10px;
+        height: auto;
+        text-align: center;
+    }
+
+    #setup, #punchline {
+        font-size: 22px;
     }
 
     .listagem{
